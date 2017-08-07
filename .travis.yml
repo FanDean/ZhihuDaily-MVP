@@ -16,13 +16,12 @@ android:
   - extra-android-support
 before_install:
 - openssl aes-256-cbc -K $encrypted_e29d74041dd8_key -iv $encrypted_e29d74041dd8_iv
+  -in keystore.properties.enc -out keystore.properties -d
+- openssl aes-256-cbc -K $encrypted_e29d74041dd8_key -iv $encrypted_e29d74041dd8_iv
   -in fan-keystore.enc -out fan-keystore -d
 - mkdir "$ANDROID_HOME/licenses" || true
 - echo -e "\n8933bad161af4178b1185d1a37fbf41ea5269c55" > "$ANDROID_HOME/licenses/android-sdk-license"
 - echo -e "\n84831b9409646a918e30573bab4c9c91346d8abd" > "$ANDROID_HOME/licenses/android-sdk-preview-license"
-- openssl aes-256-cbc -K $encrypted_e29d74041dd8_key -iv $encrypted_e29d74041dd8_iv
-  -in keystore.properties.enc -out keystore.properties -d
-
 script:
 - "./gradlew assembleRelease"
 deploy:
