@@ -1,37 +1,30 @@
 language: android
-
 before_cache:
- - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
- - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
-
+- rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
+- rm -fr $HOME/.gradle/caches/*/plugin-resolution/
 cache:
- directories:
- - $HOME/.gradle/caches/
- - $HOME/.gradle/wrapper/
-
-
+  directories:
+  - "$HOME/.gradle/caches/"
+  - "$HOME/.gradle/wrapper/"
 env:
-  global:
-
-
+  global: 
 android:
   components:
-    - build-tools-25.0.0
-    - android-25
-    - extra-android-m2repository
-    - extra-android-support
-
+  - build-tools-25.0.0
+  - android-25
+  - extra-android-m2repository
+  - extra-android-support
 before_install:
-  - mkdir "$ANDROID_HOME/licenses" || true
-  - echo -e "\n8933bad161af4178b1185d1a37fbf41ea5269c55" > "$ANDROID_HOME/licenses/android-sdk-license"
-  - echo -e "\n84831b9409646a918e30573bab4c9c91346d8abd" > "$ANDROID_HOME/licenses/android-sdk-preview-license"
-  - openssl aes-256-cbc -K $encrypted_e29d74041dd8_key -iv $encrypted_e29d74041dd8_iv -in fan-keystore.enc -out fan-keystore -d
-  - openssl aes-256-cbc -K $encrypted_e29d74041dd8_key -iv $encrypted_e29d74041dd8_iv -in keystore.properties.enc -out keystore.properties -d
+- openssl aes-256-cbc -K $encrypted_e29d74041dd8_key -iv $encrypted_e29d74041dd8_iv
+  -in fan-keystore.enc -out fan-keystore -d
+- mkdir "$ANDROID_HOME/licenses" || true
+- echo -e "\n8933bad161af4178b1185d1a37fbf41ea5269c55" > "$ANDROID_HOME/licenses/android-sdk-license"
+- echo -e "\n84831b9409646a918e30573bab4c9c91346d8abd" > "$ANDROID_HOME/licenses/android-sdk-preview-license"
+- openssl aes-256-cbc -K $encrypted_e29d74041dd8_key -iv $encrypted_e29d74041dd8_iv
+  -in keystore.properties.enc -out keystore.properties -d
 
 script:
-  - ./gradlew assembleRelease
-
-
+- "./gradlew assembleRelease"
 deploy:
   provider: releases
   file: app/build/outputs/apk/app-release.apk
@@ -39,4 +32,4 @@ deploy:
   on:
     tags: true
   api_key:
-    secure: ${GH_TOKEN}
+    secure: "${GH_TOKEN}"
