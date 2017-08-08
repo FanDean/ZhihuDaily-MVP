@@ -23,7 +23,7 @@
         android:layout_marginLeft="2dp"
         android:layout_marginRight="2dp"
         app:layoutManager="LinearLayoutManager"
-        tools:context="com.fandean.zhihudaily.ui.CollectionActivity"
+        tools:context="com.fandean.zhihudaily.ui.favorite.CollectionActivity"
         tools:listitem="@layout/collection_item"/>
 
 </LinearLayout>
