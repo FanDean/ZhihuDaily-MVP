@@ -1,4 +1,4 @@
-package com.fandean.zhihudaily.utils;
+package com.fandean.zhihudaily.data.network;
 
 /**
  * Created by fan on 17-6-17.

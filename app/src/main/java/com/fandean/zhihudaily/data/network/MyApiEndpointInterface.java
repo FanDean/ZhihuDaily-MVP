@@ -1,4 +1,4 @@
-package com.fandean.zhihudaily.utils;
+package com.fandean.zhihudaily.data.network;
 
 import com.fandean.zhihudaily.data.network.model.DoubanMovie;
 import com.fandean.zhihudaily.bean.DoubanMovieInTheaters;

@@ -22,8 +22,8 @@ import com.fandean.zhihudaily.data.db.MyBaseHelper;
 import com.fandean.zhihudaily.ui.main.DatePicerFragment;
 import com.fandean.zhihudaily.ui.main.MainActivity;
 import com.fandean.zhihudaily.utils.DateUtil;
-import com.fandean.zhihudaily.utils.HttpUtil;
-import com.fandean.zhihudaily.utils.MyApiEndpointInterface;
+import com.fandean.zhihudaily.data.network.HttpUtil;
+import com.fandean.zhihudaily.data.network.MyApiEndpointInterface;
 import com.fandean.zhihudaily.utils.NetworkState;
 
 import java.io.IOException;

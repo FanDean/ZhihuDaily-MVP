@@ -24,8 +24,8 @@ import com.amap.api.location.AMapLocationListener;
 import com.fandean.zhihudaily.R;
 import com.fandean.zhihudaily.bean.DoubanMovieInTheaters;
 import com.fandean.zhihudaily.ui.main.MainActivity;
-import com.fandean.zhihudaily.utils.HttpUtil;
-import com.fandean.zhihudaily.utils.MyApiEndpointInterface;
+import com.fandean.zhihudaily.data.network.HttpUtil;
+import com.fandean.zhihudaily.data.network.MyApiEndpointInterface;
 import com.fandean.zhihudaily.utils.NetworkState;
 
 import java.io.IOException;

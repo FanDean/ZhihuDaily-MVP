@@ -25,8 +25,8 @@ import com.fandean.zhihudaily.data.db.model.Collection;
 import com.fandean.zhihudaily.data.network.model.ZhihuStory;
 import com.fandean.zhihudaily.ui.main.MainActivity;
 import com.fandean.zhihudaily.utils.DbUtil;
-import com.fandean.zhihudaily.utils.HttpUtil;
-import com.fandean.zhihudaily.utils.MyApiEndpointInterface;
+import com.fandean.zhihudaily.data.network.HttpUtil;
+import com.fandean.zhihudaily.data.network.MyApiEndpointInterface;
 
 import java.io.IOException;
 
@@ -38,7 +38,7 @@ import retrofit2.Response;
 
 import static com.fandean.zhihudaily.R.id.fab;
 import static com.fandean.zhihudaily.ui.main.MainActivity.FAN_DEAN;
-import static com.fandean.zhihudaily.utils.HttpUtil.ZHIHU_BASE_URL;
+import static com.fandean.zhihudaily.data.network.HttpUtil.ZHIHU_BASE_URL;
 
 public class ZhihuActivity extends AppCompatActivity {
     private static final String EXTRA_ID = "com.fandean.zhihudaily.newid";

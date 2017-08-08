@@ -1,7 +1,9 @@
-package com.fandean.zhihudaily.utils;
+package com.fandean.zhihudaily.data.network;
 
 import android.content.Context;
 import android.util.Log;
+
+import com.fandean.zhihudaily.utils.NetworkState;
 
 import java.io.File;
 import java.io.IOException;

@@ -7,7 +7,7 @@ import com.bumptech.glide.Glide;
 
 import java.io.File;
 
-import static com.fandean.zhihudaily.utils.HttpUtil.OKHTTP_CACHE_DIR_NAME;
+import static com.fandean.zhihudaily.data.network.HttpUtil.OKHTTP_CACHE_DIR_NAME;
 
 /**
  *   应用内数据的所有路径：

@@ -25,8 +25,8 @@ import com.fandean.zhihudaily.data.db.model.Collection;
 import com.fandean.zhihudaily.data.network.model.DoubanMovie;
 import com.fandean.zhihudaily.ui.main.MainActivity;
 import com.fandean.zhihudaily.utils.DbUtil;
-import com.fandean.zhihudaily.utils.HttpUtil;
-import com.fandean.zhihudaily.utils.MyApiEndpointInterface;
+import com.fandean.zhihudaily.data.network.HttpUtil;
+import com.fandean.zhihudaily.data.network.MyApiEndpointInterface;
 
 import java.io.IOException;
 
@@ -37,7 +37,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 
-import static com.fandean.zhihudaily.utils.HttpUtil.DOUBSN_BASE_URL;
+import static com.fandean.zhihudaily.data.network.HttpUtil.DOUBSN_BASE_URL;
 
 public class DoubanActivity extends AppCompatActivity {
     private static final String EXTRA_ID = "com.fandean.zhihudaily.douban_id";
